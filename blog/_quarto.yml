@@ -13,7 +13,8 @@ website:
     search: true
     contents:
       - section: "FastAI Lesson Solutions"
-        contents: posts/fastai_lessons/Lesson_2_Solutions.ipynb
+        contents: 
+          - posts/fastai_lessons/Lesson_2_Solutions.ipynb
 format:
   html:
     theme: cosmo
