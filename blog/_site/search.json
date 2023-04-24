@@ -12,5 +12,26 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "posts/4_21_23_Post_1.html",
+    "href": "posts/4_21_23_Post_1.html",
+    "title": "My fast.ai plan",
+    "section": "",
+    "text": "It’s been a couple weeks since I started my fast.ai journey. I’ve been hesitant on starting a blog because of of the amount of work it seems to require. Also, because I’m not sure what I’d actually write about. But I’ve decided to give it a shot today. Rather than aiming for perfection on the first try, my goal is to do what what I can, then return and improve.\nIn Lesson 0, Jeremy Howard explains the best approach to getting the most out of the fast.ai course. The key takeaways for me were 1) finish the course 2) complete a personal project 3) write about it and 4) share your work. Additionally, for each lesson, he recommends watching the lecture, running and experimenting with the notebooks, familiarize yourself with the code and rewrite and implement everything for your own project. Thinking about doing all these recommended steps is daunting.\nTherefore, instead of aiming for perfection on the first try, I will be aiming for completion. Below is my current plan for this first runthrough of the course: 1. Lessons: - Watch the lecture, read and run through the notebook, answer the chapter questions, familiarize myself with the code by writing down the code and commenting out each line’s function. 2. Personal Project: - Find a Kaggle competition that interests me. 3. Blog: - Write a post at the end of every week. Don’t get bogged down by stylizing, or creating an actual website. The important part is tracking learnings, progress and obstacles. 4. Share Your Work: - Hold until second runthrough."
+  },
+  {
+    "objectID": "posts/4_21_23_Post_1.html#my-progress",
+    "href": "posts/4_21_23_Post_1.html#my-progress",
+    "title": "My fast.ai plan",
+    "section": "My progress",
+    "text": "My progress\nCurrently, I am finishing up the reading for Lesson 4 (I skipped Lesson 3 on Data Ethics for now). Below is my progress so far: - For lesson 1, I ran the code on search images of golden doodles versus fried chicken. - For lesson 2, I ran the code on search images of cake and bread and created a simple Cake or Bread app on Hugging Face: https://huggingface.co/spaces/joannah/cake_or_bread The model is pretty terrible given it’s only trained on a total of 45 images."
+  },
+  {
+    "objectID": "posts/4_21_23_Post_1.html#key-concepts",
+    "href": "posts/4_21_23_Post_1.html#key-concepts",
+    "title": "My fast.ai plan",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nWhat is machine learning?\n\n\nWhat is a neural network?\n\n\nWhat is stochastic gradient descent?"
   }
 ]
