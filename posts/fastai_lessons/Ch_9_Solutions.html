@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-04-14">
 
-<title>blog - Lesson 2 Solutions</title>
+<title>blog - Title: Chapter 9 Solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +72,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/fastai_lessons/Lesson_2_Solutions.html">FastAI Lesson Solutions</a></li><li class="breadcrumb-item"><a href="../../posts/fastai_lessons/Lesson_2_Solutions.html">Lesson 2 Solutions</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      blog
+      </li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -108,11 +109,8 @@ ul.task-list li input[type="checkbox"] {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/fastai_lessons/Lesson_2_Solutions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Lesson 2 Solutions</span></a>
-  </div>
-</li>
+ <span class="menu-text">posts/fastai_lessons/Lesson_2_Solutions.ipynb</span>
+  </li>
       </ul>
   </li>
     </ul>
@@ -128,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lesson 2 Solutions</h1>
+<h1 class="title">Title: Chapter 9 Solutions</h1>
 </div>
 
 
@@ -136,12 +134,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 14, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -149,6 +141,135 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<hr>
+<p>Date: May 10, 2023</p>
+<hr>
+<ol type="1">
+<li>What is a continuous variable?
+<ul>
+<li><span style="color:blue">Continuous variables are numerical data, such as “age”, that can be directly fed to the model since you can add and multiply them directly. </span></li>
+</ul></li>
+<li>What is a categorical variable?
+<ul>
+<li><span style="color:blue">Categorical variables contain a number of discrete levels, such as “movie ID,” for which addition and multiplication don’t have meaning even if they’re stored as numbers. </span></li>
+</ul></li>
+<li>Provide two of the words that are used for the possible values of a categorical variable.
+<ul>
+<li><span style="color:blue">Possible values of a categorical variable can be called its “levels”, “categories” or “classes.” </span></li>
+</ul></li>
+<li>What is a “dense layer”?
+<ul>
+<li><span style="color:blue">The “dense layer” is equivalent to an ordinary linear layer that’s placed after every one-hot-encoded input layer. </span></li>
+</ul></li>
+<li>How do entity embeddings reduce memory usage and speed up neural networks?
+<ul>
+<li><span style="color:blue">When datasets have high cardinality features, it can be memory intensive to store them as one hot encodings that are likely sparse. Entity embeddings allow more memory efficient and dense representations of the data which therefore helps speed up neural networks. </span></li>
+</ul></li>
+<li>What kinds of datasets are entity embeddings especially useful for?
+<ul>
+<li><span style="color:blue">Entity embeddings are especially useful for datasets with lots of high cardinality features where other methods tend to overfit. It is also helpful for visualizing categorial data and for data clustering as the entity embeddings define a distance measure for categorical variables.</span></li>
+</ul></li>
+<li>What are the two main families of machine learning algorithms?
+<ul>
+<li><span style="color:blue">Ensembles of decision trees which are mainly used for structured data and multilayered neural networks learned with stochastic gradient descent, mainly used for unstructured data such as audio, images and natural language </span></li>
+</ul></li>
+<li>Why do some categorical columns need a special ordering in their classes? How do you do this in Pandas?
+<ul>
+<li><span style="color:blue">These type of columns are called ordinal columns which refers to strings that have a natural ordering such as “small”, “medium”, “large.” To do this in Pandas, we first set the dataframe column astype ‘category.’ Then we pass in an ordered list to set_categories with ordered set to True to let Pandas know about a suitable ordering of the column levels. </span></li>
+</ul></li>
+<li>Summarize what a decision tree algorithm does.
+<ul>
+<li><span style="color:blue">The basic idea of what a decision tree algorithm does is to determine how to group the data based on “questions” that we ask about the data. That is, we keep splitting the data based on the levels or values of the features and generate predictions based on the average target value of the data points in that group. Here is the algorithm:</span></li>
+</ul>
+<span style="color:blue"> - Loop through each column of the dataset in turn </span> <span style="color:blue"> - For each column, loop through each possible level of that column in turn </span> <span style="color:blue"> - Try splitting the data into two groups, based on whether they are greater than or less than that value (or if it is a categorical variable, based on whether they are equal to or not equal to that level of that categorical variable) </span> <span style="color:blue"> - Find the average sale price for each of those two groups, and see how close that is to the actual sale price of each of the items of equipment in that group. That is, treat this as a very simple “model” where our predictions are simply the average sale price of the item’s group </span> <span style="color:blue"> - After looping through all of the columns and possible levels for each, pick the split point which gave the best predictions using our very simple model </span> <span style="color:blue"> - We now have two different groups for our data, based on this selected split. Treat each of these as separate datasets, and find the best split for each, by going back to step one for each group </span> <span style="color:blue"> - Continue this process recursively, and until you have reached some stopping criterion for each group — for instance, stop splitting a group further when it has only 20 items in it. </span></li>
+<li>Why is a date different from a regular categorical or continuous variable, and how can you preprocess it to allow it to be used in a model?
+<ul>
+<li><span style="color:blue">Some dates are qualitatively different from others. We might want our model to make decisions based on that date’s day of the week, on whether a day is a holiday, on what month it is in and so forth. Therefore, we replace every date column with a set of date metadata columnstjat we think will be useful. </span></li>
+</ul></li>
+<li>Should you pick a random validation set in the bulldozer competition? If no, what kind of validation set should you pick?
+<ul>
+<li><span style="color:blue">No, as the goal of the model is to predict the future. Therefore we will need a validation set to be later in time than the training set. </span></li>
+</ul></li>
+<li>What is pickle and what is it useful for?
+<ul>
+<li><span style="color:blue">It allows you to save nearly any Python object. For example, since preprocessing datat can take some time, we can save our preprocessed TabularPandas object at a given point so tis easy to continue our work another day without rerunning previous steps. </span></li>
+</ul></li>
+<li>How are mse, samples, and values calculated in the decision tree drawn in this chapter?
+<ul>
+<li><span style="color:blue">By traversing the tree based on answering questions about the data, we reach the nodes that tell us the average value of the data in that group, the mse, and the number of samples in that group. </span></li>
+</ul></li>
+<li>How do we deal with outliers, before building a decision tree?
+<ul>
+<li><span style="color:blue">Outliers can sometimes make visualizing decision trees more difficult. For example, with year 1000 as a placeholder for missing values, we weren’t able to get a good visualization of the distribution of the YearMade data. By changing the values to 1950, the distribution was much more apparent through the tree visualization; it also doesn’t change the result of the model in any significant way which demonstrates the resilience of decision trees to data issues. </span></li>
+</ul></li>
+<li>How do we handle categorical variables in a decision tree?
+<ul>
+<li><span style="color:blue">We don’t have to do anything. During training, the decision tree algorithm will automatically make splits that increase homogenity within a subgroup, which hones in on the intrinsic meaning of the different levels of the variable. </span></li>
+</ul></li>
+<li>What is bagging?
+<ul>
+<li><span style="color:blue">Bagging is a method for generating multiple versions of a predictor and using these to get an aggregated predictor. The process is as follows: 1) Randomly choose a subset of the rows of your data 2) Train a model using this subset 3) Save that model, and tehn return to step 1 a few times 4) You will end up with multiple trained models. To make a prediction, predict using all of the models and then take the average of each of those model’s predictions. While each of the models trained on a subset of data will make more errors than a model trained on the full dataset, those errors will be uncorrelated with each other. Different models will make different errors and the average of those errors is zero. Therefore if we take the average of all the model’s predictions, we should end up with a prediction that gets closer and closer to the correct answer, the more models we have. </span></li>
+</ul></li>
+<li>What is the difference between max_samples and max_features when creating a random forest?
+<ul>
+<li><span style="color:blue">Max_samples defines how many rows to sample for training each tree, and max_features defines how many columns to sample at each split point. </span></li>
+</ul></li>
+<li>If you increase n_estimators to a very high value, can that lead to overfitting? Why or why not?
+<ul>
+<li><span style="color:blue">x </span></li>
+</ul></li>
+<li>In the section “Creating a Random Forest”, just after &lt;<max_features>&gt;, why did preds.mean(0) give the same result as our random forest?
+<ul>
+<li><span style="color:blue">Because we are taking the average of the predictions from each individual tree in our forest through the estimators_ attribute.</span></li>
+</ul></max_features></li>
+<li>What is “out-of-bag-error”?
+<ul>
+<li><span style="color:blue">A way of measuring prediction error in the training dataset by validating only on rows that were not included in the training </span></li>
+</ul></li>
+<li>Make a list of reasons why a model’s validation set error might be worse than the OOB error. How could you test your hypotheses?
+<ul>
+<li><span style="color:blue">x </span></li>
+</ul></li>
+<li>Explain why random forests are well suited to answering each of the following question:
+<ul>
+<li>How confident are we in our predictions using a particular row of data? <span style="color:blue">Measure standard deviation of predictions across the trees; we would want to be more cautious of using results for rows where trees give very different results (higher standard dev) compared to cases where they are more consistent (lower standard dev) </span></li>
+<li>For predicting with a particular row of data, what were the most important factors, and how did they influence that prediction? <span style="color:blue">Use the feature_importances_ attribute which loops through each tree and recursively explores each branch looking at what feature was used for that split, and how much the model improves as a result of that split </span></li>
+<li>Which columns are the strongest predictors? <span style="color:blue">Features with the highest importance scores. </span></li>
+<li>How do predictions vary as we vary these columns? <span style="color:blue">Partial dependence plots allows us to answer the question: if a row varied on nothing other than the feature in question, how would it impact the dependent variable? </span></li>
+</ul></li>
+<li>What’s the purpose of removing unimportant variables?
+<ul>
+<li><span style="color:blue">Simpler, more interpretable models are easier to roll out and maintain. By honing in on the important variables, we will also be able to study them more in depth. </span></li>
+</ul></li>
+<li>What’s a good type of plot for showing tree interpreter results?
+<ul>
+<li><span style="color:blue">A waterfall plot shows how the positive and negative contributions from all the independent variables sum up to create the final prediction. </span></li>
+</ul></li>
+<li>What is the “extrapolation problem”?
+<ul>
+<li><span style="color:blue">Random forests are not able to extrapolate outside of the types of data they have seen. </span></li>
+</ul></li>
+<li>How can you tell if your test or validation set is distributed in a different way than your training set?
+<ul>
+<li><span style="color:blue">We can combine our training and validation sets, create a dependent variable that represents which dataset each row comes from, build a random forest using that data and get its feature importance. By looking at the feature importance, we can see which columns differ significantly between the datasets. </span></li>
+</ul></li>
+<li>Why do we ensure saleElapsed is a continuous variable, even although it has less than 9,000 distinct values?
+<ul>
+<li><span style="color:blue">This is a variable that changes over time, and since we want our model to extrapolate for future results, we make this a continuous variable. </span></li>
+</ul></li>
+<li>What is “boosting”?
+<ul>
+<li><span style="color:blue">We train a model that underfits the dataset, and train subsequent models that predicts the error of the original model. Each new tree will be attempting to fit the error of all of the previous trees combined. We continually create new resideuals by subtracting the predictions of each new tree from the residuals of the previous trees. As a result, the residuals increasingly decrease. To make predictions with an ensemple of boosted trees, we calculate the predictions from each tree and then add them all together. </span></li>
+</ul></li>
+<li>How could we use embeddings with a random forest? Would we expect this to help?
+<ul>
+<li><span style="color:blue">Entity embeddings contains richer representations of the categorical features and definitely can improve the performance of other models like random forests. Instead of passing in the raw categorical columns, the entity embeddings can be passed into the random forest model. </span></li>
+</ul></li>
+<li>Why might we not always use a neural net for tabular modeling?
+<ul>
+<li><span style="color:blue">Neural networsk take the longest time to train and require extra preprocessing such as normalization. They are also highly sensitive to hyperparameter settings. Therefore it is best to start with a random forest as they are extremely resilient to hyperparameter choices and require little preprocessing. </span></li>
+</ul></li>
+</ol>
 
 
 

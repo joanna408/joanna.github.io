@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.319">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>blog - Title: Chapter 4 Solutions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      blog
+      </li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">blog</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">FastAI Lesson Solutions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">posts/fastai_lessons/Lesson_2_Solutions.ipynb</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Title: Chapter 4 Solutions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<p>Date: April 24, 2023</p>
+<hr>
+<ol type="1">
+<li><p>How is a grayscale image represented on a computer? How about a color image?</p>
+<ul>
+<li><span style="color:blue">A grayscale image is represented by a list of NumPy arrays or PyTorch tensors. White pixels are stored as the number 0, black is the number 255 and shades of grey are between the two. For color images, separate red, green and blue components are stored for each pixel so the pixel value is a vector of 3 numbers. </span></li>
+</ul></li>
+<li><p>How are the files and folders in the MNIST_SAMPLE dataset structured? Why?</p>
+<ul>
+<li><span style="color:blue">The MNIST dataset contains separate folders for training and validation set. Within those folders are the respective folders for each number or labels in the dataset. </span></li>
+</ul></li>
+<li><p>Explain how the “pixel similarity” approach to classifying digits works.</p>
+<ul>
+<li><span style="color:blue">For the pixel similarity approach, we take the average pixel values of all the training set digits (i.e.&nbsp;the 3’s, the 7’s) and we use each group average as the “ideal” representatin of a given digit. To classify a new digit image, we would calculate its distance from the ideal digit using the mean absolute difference or the root mean squared error. If the digit has the smallest distance from the ideal 3, it would be classified as a 3. If it has the smallest distance from the ideal 7, it would be classified as a 7 and so forth. </span></li>
+</ul></li>
+<li><p>What is a list comprehension? Create one now that selects odd numbers from a list and doubles them.</p>
+<ul>
+<li><span style="color:blue">A list comprehension consists three parts: 1) the collection you are iterating over, 2) an optional filter and 3) something to do to each element. It’s shorter to write and more efficient that creating the same list with a loop. double_odds = [2*x for x in a_list if x%2 !=0]</span></li>
+</ul></li>
+<li><p>What is a “rank-3 tensor”?</p>
+<ul>
+<li><span style="color:blue">The rank of a tensor is the number of dimensions it has. An easy way to identify the rank is the number of indices you would need to reference a number within a tensor. A scalar can be represented as a tensor of rank 0 (no index), a vector can be represented as a tensor of rank 1 (one index, e.g., v[i]), a matrix can be represented as a tensor of rank 2 (two indices, e.g., a[i,j]), and a tensor of rank 3 is a cuboid or a “stack of matrices” (three indices, e.g., b[i,j,k]). In particular, the rank of a tensor is independent of its shape or dimensionality, e.g., a tensor of shape 2x2x2 and a tensor of shape 3x5x7 both have rank 3. </span></li>
+</ul></li>
+<li><p>What is the difference between tensor rank and shape? How do you get the rank from the shape?</p>
+<ul>
+<li><span style="color:blue">Tensor rank is the number of dimensions or axes, and the tensor shape is the length of the axes. To get the rank of a tensor, use tensor.ndim() or len(tensor.shape).</span></li>
+</ul></li>
+<li><p>What are RMSE and L1 norm?</p>
+<ul>
+<li><span style="color:blue">There are two commonly used methods of measuring “distance”. They provide the magnitudes of the differences that is needed to properly measure distances. RMSE: Square root of mean squared of differences, L1 norm: the mean of the absolute value of differences </span></li>
+<li><span style="color:blue">With a_3 as the average pixel values of a given image and mean3 as the “ideal” 3: - l1 = (a_3-mean3).abs().mean() - l1 = ((a_3-mean3)**2)).mean().sqrt()</span></li>
+</ul></li>
+<li><p>How can you apply a calculation on thousands of numbers at once, many thousands of times faster than a Python loop?</p>
+<ul>
+<li><span style="color:blue">Using NumPy arrays and PyTorch tensors can finish computations many thousands of times faster than using pure python as it is likely to be a wrapper for a compiled object written and optimized in another language, such as C. </span></li>
+</ul></li>
+<li><p>Create a 3×3 tensor or array containing the numbers from 1 to 9. Double it. Select the bottom-right four numbers.</p>
+<ul>
+<li>data = [[1,2,3],[4,5,6],[7,8,9]]</li>
+</ul>
+<p>tns = tensor(data)</p>
+<p>tns = tns*2</p>
+<p>tns[1:,1:]</p></li>
+<li><p>What is broadcasting?</p>
+<ul>
+<li><span style="color:blue">Broadcasting is a nice capability for tensor code that autoamtically expands the tensor with a smaller rank to have the same size as the one with the larger rank. </span></li>
+</ul></li>
+<li><p>Are metrics generally calculated using the training set, or the validation set? Why?</p>
+<ul>
+<li><span style="color:blue">Metrics are generally calculated using the validation set because it tells us how well the model predicts on unseen data.</span></li>
+</ul></li>
+<li><p>What is SGD?</p>
+<ul>
+<li><span style="color:blue">SGD, or stochastic gradient descent, is an optimization algorithm. Specifically, SGD is an algorithm that will update the parameters of a model in order to minimize a given loss function that was evaluated on the predictions and target. The key idea behind SGD (and many optimization algorithms, for that matter) is that the gradient of the loss function provides an indication of how that loss function changes in the parameter space, which we can use to determine how best to update the parameters in order to minimize the loss function. This is what SGD does.</span></li>
+</ul></li>
+<li><p>Why does SGD use mini-batches?</p>
+<ul>
+<li><span style="color:blue">To take an optimization step (change or update weights based on the gradients), we need to calculate loss over one or more data items. Rather than calculating it for the whole dataset which would take a long time, or to calculate for a single data item (which results in an imprecise and unstable gradient given its based on a single item), we calculate the average loss for a few data items at a time called a mini batch. Usiing mini-batches also allows us to utilize on an accelerator such as a GPU. </span></li>
+</ul></li>
+<li><p>What are the seven steps in SGD for machine learning?</p>
+<ol type="1">
+<li><span style="color:blue"> Initialize the weights </span></li>
+<li><span style="color:blue"> Make predictions using given weights </span></li>
+<li><span style="color:blue"> Calculate loss to determine how good model performs with given weights </span></li>
+<li><span style="color:blue"> Calculate gradient to determine which direction to change the weights to minimize loss and set learning rate to decide step size </span></li>
+<li><span style="color:blue"> Change all the weights based on that calculation </span></li>
+<li><span style="color:blue"> Repeat the process from step 2 </span></li>
+<li><span style="color:blue"> Stop when epochs are reached or desired model performance is achieved </span></li>
+</ol></li>
+<li><p>How do we initialize the weights in a model?</p>
+<ul>
+<li><span style="color:blue">You can randomly intialize weights or use weights from pretrained model. </span></li>
+</ul></li>
+<li><p>What is “loss”?</p>
+<ul>
+<li><span style="color:blue">A value based on a prediction and a target, where lower values of the function correspond to “better” predictions. For continuous data, its common to use mean squared error. </span></li>
+</ul></li>
+<li><p>Why can’t we always use a high learning rate?</p>
+<ul>
+<li><span style="color:blue">Using a high learning rate can result in the loss getting worse and taking many steps to train successfully where loss and parameters values diverge. </span></li>
+</ul></li>
+<li><p>What is a “gradient”?</p>
+<ul>
+<li><span style="color:blue">The gradient tells us how much we have to change each weight to make our model better (and minimize loss). The gradient is defined as rise over run; that is the change in the value of the function divided by the change in the value of the parameter. By knowing how our function will change, we know which direction to adjust our parameters. If the gradient is very large, that may suggest that we have more adjustments to do, whereas if the gradient is very small, that may suggest that we are close to the optimal value.</span></li>
+</ul></li>
+<li><p>Do you need to know how to calculate gradients yourself?</p>
+<ul>
+<li><p><span style="color:blue">No, PyTorch is able to automatically compute the derivatives of nearly any function. Given f(x) = x**2: </span></p>
+<pre><code>  xt =tensor(3.).requires_grad_() # this tells PyTroch that we want to calculate gradients with respect to that variable at that value
+  yt = f(xt) # outputs tensor(9., grad_fn=\&lt;PowBackward0\&gt;)
+  yt.backward() # calculate the gradient
+  xt.grad # outputs tensor(6.)</code></pre></li>
+</ul></li>
+<li><p>Why can’t we use accuracy as a loss function?</p>
+<ul>
+<li><span style="color:blue">The gradient of a function is its slope that tell us how much the value of the function goes up or down divided by how much we changed the input. Accuracy only has a significant change when a prediction changes from one side to another. A small change in weights isn’t likely to cause any prediction to change so the gradient is 0 almost everywhere. If we used accuracy as a loss function, the model will not be able to learn from that number given it will be 0 most of the time. </span></li>
+</ul></li>
+<li><p>Draw the sigmoid function. What is special about its shape?</p>
+<ul>
+<li><span style="color:blue">Its outputs are always a number between 0 and 1. </span></li>
+</ul></li>
+<li><p>What is the difference between a loss function and a metric?</p>
+<ul>
+<li><span style="color:blue">Metric is to drive human understanding and loss function is to drive automated learning. The loss must be a function with a meaningful derivative and is reasonably smooth. Metrics are values that tell us how our model is doing. </span></li>
+</ul></li>
+<li><p>What is the function to calculate new weights using a learning rate?</p>
+<ul>
+<li><span style="color:blue">We use the magnitude of the gradient (steepness of the slope) to tell us how big a step to take. We multiply the gradient by a number we choose called the learning rate to decide on the step size. WE then iterate until we have reached the lowest point. </span></li>
+</ul></li>
+<li><p>What does the DataLoader class do?</p>
+<ul>
+<li><span style="color:blue">It can take any Python collection and turn it into an iterator over many batches. When we pass a Dataset to a DataLoader, we get back many batches that are tuples of tensors representing batches of independent and dependent variables. </span></li>
+</ul></li>
+<li><p>Write pseudocode showing the basic steps taken in each epoch for SGD. for x,y in dl: pred = model(x) loss = loss_func(pred, y) loss.backward() parameters -= parameters.grad * lr</p></li>
+<li><p>Create a function that, if passed two arguments [1,2,3,4] and ‘abcd’, returns [(1, ‘a’), (2, ‘b’), (3, ‘c’), (4, ‘d’)]. What is special about that output data structure?</p>
+<ul>
+<li><span style="color:blue"> def func(a,b): return list(zip(a,b))</span> This data structure is useful for machine learning models when you need lists of tuples where each tuple would contain input data and a label.</li>
+</ul></li>
+<li><p>What does view do in PyTorch?</p>
+<ul>
+<li><span style="color:blue">PyTorch method that changes the shape of a tensor without changing its contents.</span></li>
+</ul></li>
+<li><p>What are the “bias” parameters in a neural network? Why do we need them?</p>
+<ul>
+<li><span style="color:blue"> Without the bias parameters, if the input is zero, the output will always be zero. Therefore, using bias parameters adds additional flexibility to the model. </span></li>
+</ul></li>
+<li><p>What does the @ operator do in Python?</p>
+<ul>
+<li><span style="color:blue">Used for matrix multiplication</span></li>
+</ul></li>
+<li><p>What does the backward method do?</p>
+<ul>
+<li><span style="color:blue"> “Backward” refers to backpropagation, which is the process of calculating the derivative of each layer. </span></li>
+</ul></li>
+<li><p>Why do we have to zero the gradients?</p>
+<ul>
+<li><span style="color:blue">loss.backward adds the gradients of loss to any gradients that are currently stored. Therefore we have to set the current gradients to 0 at the end of each epoch. </span></li>
+</ul></li>
+<li><p>What information do we have to pass to Learner?</p>
+<ul>
+<li><span style="color:blue">To create a Learner, we need to pass in the DataLoaders, the model, the optimization function (which will be given the parameters), the loss function and optionally any metrics to print. </span></li>
+</ul></li>
+<li><p>Show Python or pseudocode for the basic steps of a training loop. def train_epoch(model, lr, params): for xb,yb in dl: calc_grad(xb, yb, model) for p in params: p.data -= p.grad*lr p.grad.zero_()</p>
+<p>for i in range(20): train_epoch(model, lr, params)</p></li>
+<li><p>What is “ReLU”? Draw a plot of it for values from -2 to +2.</p>
+<ul>
+<li><span style="color:blue">A ReLU, or rectified linear unit, is a function that replaces every negative number with a zero: res.max(tensor(0.0)). It is also available in PyTorch as F.relu. </span></li>
+</ul></li>
+<li><p>What is an “activation function”?</p>
+<ul>
+<li><span style="color:blue">A nonlinearity that’s different from ax+b</span></li>
+</ul></li>
+<li><p>What’s the difference between F.relu and nn.ReLU?</p>
+<ul>
+<li><span style="color:blue">nn.ReLU is a PyTorch module that does exactly the same thing as F.relu function. When using nn.Sequential, PyTorch requires us to use the module version. Note that modules are classes so we have to instantiate them. </span></li>
+</ul></li>
+<li><p>The universal approximation theorem shows that any function can be approximated as closely as needed using just one nonlinearity. So why do we normally use more?</p>
+<ul>
+<li><span style="color:blue">With a deeper model (one with more layers), we do not need to use as many parameters. It turns out that we can use smaller matrices, with more layers, and get better results than we would get with larger matrices and few layers. This allows us to train the model more quickly and it also takes up less memory. </span></li>
+</ul></li>
+</ol>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

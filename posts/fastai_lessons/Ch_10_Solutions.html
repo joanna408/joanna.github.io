@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>blog - About</title>
+<title>blog - Title: Chapter 10 Solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">blog</a> 
+      <a href="../../">blog</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Title: Chapter 10 Solutions</h1>
 </div>
 
 
@@ -141,7 +141,99 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>About this site</p>
+<hr>
+<p>Date: April 27, 2023</p>
+<hr>
+<ol type="1">
+<li>What is “self-supervised learning”?
+<ul>
+<li><span style="color:blue">Self-supervising learning is when training a model where the labels are embedded in the independent variable, rather than requiring external labels. </span></li>
+</ul></li>
+<li>What is a “language model”?
+<ul>
+<li><span style="color:blue">A language model is a model that has been trained to guess the next word in a text after reading the ones before. </span></li>
+</ul></li>
+<li>Why is a language model considered self-supervised?
+<ul>
+<li><span style="color:blue">We do not give labels to our model. Instead we feed it lots of texts and it is able to automatically get the labels from the data. </span></li>
+</ul></li>
+<li>What are self-supervised models usually used for?
+<ul>
+<li><span style="color:blue">These models are usually used for pretraining a model used for transfer learning. </span></li>
+</ul></li>
+<li>Why do we fine-tune language models?
+<ul>
+<li><span style="color:blue">While the pretrained model may know the basics of the language we are using in the task, it helps to get used to the style of the corpus we are targeting. In the case of the IMDb dataset, there will be lots of names of movie directors and actors, and often a less formal style of language than that seen in Wikipedia. </span></li>
+</ul></li>
+<li>What are the three steps to create a state-of-the-art text classifier?
+<ul>
+<li><span style="color:blue">1) The LM is trained on a general-domain corpus to capture general features of the language in different layers. 2) Fine-tune the LM on data of the target task so it adapts to the idiosyncracies of the target data. 3) Fine-tune the LM as a text classifier. </span></li>
+</ul></li>
+<li>How do the 50,000 unlabeled movie reviews help us create a better text classifier for the IMDb dataset?
+<ul>
+<li><span style="color:blue">By fine-tuning the pretraining language model (already trained on Wikipedia articles), this LM will become particularly good at predicting the next word of a movie review. For it to improve in predicting the next word of a text, it will need a better understanding of the language style and structure of the text the IMDb dataset, which will in turn help it perform better as a text classifier. </span></li>
+</ul></li>
+<li>What are the three steps to prepare your data for a language model?
+<ul>
+<li><span style="color:blue">Tokenization, numericalization and language model data loader </span></li>
+</ul></li>
+<li>What is “tokenization”? Why do we need it?
+<ul>
+<li><span style="color:blue">A deep learning model expects numbers as inputs, not English words so we need to convert the text into a list of words through tokenization. </span></li>
+</ul></li>
+<li>Name three different approaches to tokenization.
+<ul>
+<li><span style="color:blue">1) Word-based: split a sentence on spaces and applying language-specific rules to try to separate parts of meaning even when there are no spaces (i.e.&nbsp;“don’t” into “do n’t”) 2) Subword based: split words into samller parts 3) split a sentence into its individual characters </span></li>
+</ul></li>
+<li>What is <code>xxbos</code>?
+<ul>
+<li><span style="color:blue">A special token that indicates the start of a new text. </span></li>
+</ul></li>
+<li>List four rules that fastai applies to text during tokenization.
+<ol type="1">
+<li><span style="color:blue"> A sequence of the same character will be replaced with a special repeated character token (xxrep), followed by the number of times the character is repeated and then the single character (i.e.&nbsp;!!!! &gt; ‘xxrep’, ‘4’, ‘!’ </span></li>
+<li><span style="color:blue"> A capitalized word will be replaced with a special capitalization token, followed by the lowercase version of the word (i.e.&nbsp;INDEX &gt; ‘xxup’, ‘index’) </span></li>
+<li><span style="color:blue"> xxmaj indicates the next word begins with a capital (since we lowercased everything) (i.e.&nbsp;‘This movie…’ &gt; ‘xxmaj’, ‘this’, ‘movie’) </span></li>
+<li><span style="color:blue"> xxunk indicates a word is unknown </span></li>
+</ol></li>
+<li>Why are repeated characters replaced with a token showing the number of repetitions and the character that’s repeated?
+<ul>
+<li><span style="color:blue">This allows the model to encode information about repeated characters without requiring a separate token for every repetition of the same character. </span></li>
+</ul></li>
+<li>What is “numericalization”?
+<ul>
+<li><span style="color:blue">The process of mapping tokens to integers </span></li>
+</ul></li>
+<li>Why might there be words that are replaced with the “unknown word” token?
+<ul>
+<li><span style="color:blue">Max_vocab of 60000 is one of the defaults to Numericalize. Therefore, all words other than the most common 60,000 will be replaced with a special unknown word token. This avoids having an overly large embedding matrix, since that can slow down trainign and use up too much memory. The second default is min_freq=3 which means any words that appears fewer than 3 times is replaced with xxunk as well. </span></li>
+</ul></li>
+<li>With a batch size of 64, the first row of the tensor representing the first batch contains the first 64 tokens for the dataset. What does the second row of that tensor contain? What does the first row of the second batch contain? (Careful—students often get this one wrong! Be sure to check your answer on the book’s website.)
+<ul>
+<li><span style="color:blue">With a batch size of 64 asnd a sequence length of 8, the second row of that tensor will have tokens 9-16. The first row of the second batch contains tokens 65-73. </span></li>
+</ul></li>
+<li>Why do we need padding for text classification? Why don’t we need it for language modeling?
+<ul>
+<li><span style="color:blue">PyTorch DataLoaders collects all items in a batch into a single tensor but each tensor has to be a fixed shape. To make sure all the texts are the same length, we will expand the shortest texts to make them all the same size. We don’t have the same issue with language modeling since we concatenate all the documents first and then split them into equally sized sections. </span></li>
+</ul></li>
+<li>What does an embedding matrix for NLP contain? What is its shape?
+<ul>
+<li><span style="color:blue">It contains vector representations of all tokens in the vocabulary. The embedding matrix has the size (vocab_size x embedding_size), where vocab_size is the length of the vocabulary, and embedding_size is an arbitrary number defining the number of latent factors of the tokens. </span></li>
+</ul></li>
+<li>What is “perplexity”?
+<ul>
+<li><span style="color:blue">It is the expoential of the loss, often used as a metric in NLP for language models. </span></li>
+</ul></li>
+<li>Why do we have to pass the vocabulary of the language model to the classifier data block?
+<ul>
+<li><span style="color:blue">By passing the vocab of the language model, we make sure we are using the same correspondence of token to index. Otherwise, the embeddings we learned in our fine-tuned language model won’t make any sense to the model and the fine-tuning step will no longer be useful. </span></li>
+</ul></li>
+<li>What is “gradual unfreezing”?
+<ul>
+<li><span style="color:blue">This refers to unfreezing one layer at a time and fine-tuning the pretrained model.</span></li>
+</ul></li>
+</ol>
+<p> 22. Why is text generation always likely to be ahead of automatic identification of machine-generated texts? - <span style="color:blue">Because a better classification or identification algorithm can be used to create an even better generation algorithm. </span></p>
 
 
 

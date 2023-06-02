@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>blog - About</title>
+<title>blog - NLP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">blog</a> 
+      <a href="../../">blog</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -119,14 +119,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#text-classification" id="toc-text-classification" class="nav-link active" data-scroll-target="#text-classification">Text Classification</a>
+  <ul class="collapse">
+  <li><a href="#source-jeremy-howards-nlp-for-absolute-beginners-and-iterate-like-a-grandmaster" id="toc-source-jeremy-howards-nlp-for-absolute-beginners-and-iterate-like-a-grandmaster" class="nav-link" data-scroll-target="#source-jeremy-howards-nlp-for-absolute-beginners-and-iterate-like-a-grandmaster">Source: Jeremy Howard’s NLP For Absolute Beginners and Iterate like a Grandmaster</a></li>
+  <li><a href="#source-fares-sayah-nlp-for-beginners" id="toc-source-fares-sayah-nlp-for-beginners" class="nav-link" data-scroll-target="#source-fares-sayah-nlp-for-beginners">Source: Fares Sayah NLP For Beginners</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">NLP</h1>
 </div>
 
 
@@ -141,9 +151,55 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>About this site</p>
+<p>For the week of 4/24/23, I spent my time on Chapter 4 (Lecture 3) and Chapter 10 (Lecture 4) of FastAi. There were 37 questions as the end of Chapter 4 so it took a couple days to get through it. The first half of the week was focused on how to create a basic digit classifier and the workings of stochastic gradient descent. The second half of the week was spent on Lecture 4 where Jeremey introduces how to train a NLP model using HuggingFace Transformers.</p>
+<p>I thought about diving into an NLP Kaggle competition but the example we’re shown is merely one task of the many types of NLP projects. Therefore, I’ve decided for this first pass through of the course, rather than feeling utterly lost when presented with a Kaggle competition, I’d like to read through popular notebooks from various competitions from the last year and jot down notes of their approach. Through this exposure, I will hopefully gain a better understanding of how to tackle various NLP tasks from preprocessing and EDA to building existing models and improving on it.</p>
+<section id="text-classification" class="level2">
+<h2 class="anchored" data-anchor-id="text-classification">Text Classification</h2>
+<section id="source-jeremy-howards-nlp-for-absolute-beginners-and-iterate-like-a-grandmaster" class="level3">
+<h3 class="anchored" data-anchor-id="source-jeremy-howards-nlp-for-absolute-beginners-and-iterate-like-a-grandmaster"><a href="https://www.kaggle.com/code/jhoward/getting-started-with-nlp-for-absolute-beginners/">Source: Jeremy Howard’s NLP For Absolute Beginners</a> and <a href="https://www.kaggle.com/code/jhoward/iterate-like-a-grandmaster/">Iterate like a Grandmaster</a></h3>
+<ul>
+<li>Competition: U.S. Patent Phrase to Phrase Matching</li>
+<li>Task: Compare two words or short phrases and score them based on whether they’re similar to not. Score of 1 means two inputs are identical in meaning, 0 means they have totally different meanings</li>
+<li>Input format: ‘TEXT 1: A47; TEXT 2: abatement of pollution; ANC1: abatement’</li>
+<li>Preprocessing: Combining three columns into one string of text, Tokenization and numericalization</li>
+<li>Model: Microsoft Deberta V3 Small</li>
+<li>Metric: Pearson coefficient between predicted and actual similarity scores</li>
+<li>EDA: look at distribution of each input column (histogram of scores, value counts by column) to make sure training and validation sets are comparable</li>
+<li>Ways to improve baseline model:
+<ul>
+<li>What if we made the patent section a special token? Then potentially the model might learn to recognize that different sections need to be handled in different ways.</li>
+<li>Try a model pretrained on legal vocabulary. E.g. how about BERT for patents?</li>
+<li>You’d likely get better results by using a sentence similarity model. Did you know that there’s a patent similarity model you could try?</li>
+<li>You could also fine-tune any HuggingFace model using the full patent database (which is provided in BigQuery), before applying it to this dataset</li>
+</ul></li>
+<li>Libraries: datasetes, transformers [Notes from 4/28/23]</li>
+</ul>
+</section>
+<section id="source-fares-sayah-nlp-for-beginners" class="level3">
+<h3 class="anchored" data-anchor-id="source-fares-sayah-nlp-for-beginners"><a href="https://www.kaggle.com/code/faressayah/natural-language-processing-nlp-for-beginners">Source: Fares Sayah NLP For Beginners</a></h3>
+<ul>
+<li>Task: Spam Detection</li>
+<li>Input format: TF-IDF document-term matrix</li>
+<li>Preprocessing:
+<ul>
+<li>Remove all punctuation, all stopwords</li>
+<li>Vectorization with CountVectorizer (converts text into a matrix of token counts), use TFIDF Transformer to multiply term frequency with inverse document frequency (weigh the counts so that frequent tokens get lower weight)</li>
+</ul></li>
+<li>Model: Multinomial Naive Bayes, Logistic Regression</li>
+<li>Metric: Accuracy</li>
+<li>EDA: message length, common words</li>
+<li>Ways to improve baseline model:
+<ul>
+<li>Vectorizer Turning - use language specific stopwords lists, use varying n_gram lengths, ignore terms that have document frequency higher or below a specific threshold</li>
+</ul></li>
+<li>Libraries: scikitlearn, nltk</li>
+</ul>
+<p>[Notes from 4/29/23]</p>
+<p>https://www.kaggle.com/code/nkitgupta/text-representations https://www.kaggle.com/code/aishwarya2210/prediction-of-tweets-using-bert-model</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
